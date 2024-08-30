@@ -8,8 +8,8 @@ Neste repositório, você encontrará diversos arquivos e códigos referentes à
 
 ## Estrutura do Repositório
 
-- **/redes-complexas/**: Atividades e práticas relacionadas à disciplina PCC121 - Redes Complexas.
-- **/paa/**: Atividades e práticas relacionadas à disciplina PCC104 - Projeto e Análise de Algoritmos.
+- **/redes-complexas**: Atividades e práticas relacionadas à disciplina PCC121 - Redes Complexas.
+- **/paa**: Atividades e práticas relacionadas à disciplina PCC104 - Projeto e Análise de Algoritmos.
 - **README.md**: Este arquivo com informações gerais sobre o repositório.
 
 ## Observações
