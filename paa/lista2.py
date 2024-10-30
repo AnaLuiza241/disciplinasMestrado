@@ -9,12 +9,13 @@
 # Retorne o elemento faltante.
 
 def faltante(arr, n):
-    aux = 1
+    soma_esperada = 0
+    soma_real = 0
     for i in range(n-1):
-        if aux != arr[i]:
-            return aux
-        aux += 1
-    return aux
+        soma_real += i+1
+        soma_esperada += arr[i]
+    soma_real += n
+    return soma_real - soma_esperada
 
 
 # 2. Array Leaders 
@@ -87,9 +88,26 @@ def kadane (arr):
 # No caso de m´ultiplos subarrays, retorne os ´ındices do subarray que aparece primeiro ao mover da
 # esquerda para a direita. Se nenhum subarray existir, retorne um array contendo o elemento -1.
 
+
+# ## Matrizes
+
+def buscaMatriz (mat, x):
+    m = len(mat)
+    n = len(mat[0])
+    for j in range(m):
+        if mat[n-1][j] == x:
+            return 1
+        if mat[n-1][j] >= x:
+            for i in range(n):
+                if mat[i][j] == x:
+                    return 1
+    return 0
+
+
 if __name__ == '__main__':
     print('Teste dos exercícios:\n')
 
+    print('ARRAYS')
     print('EXERCÍCIO 1:')
     
     l = [1,2,3,5]
@@ -128,6 +146,21 @@ if __name__ == '__main__':
 
     print('---------------------------------------------------------------------------')
 
-    print('EXERCÍCIO 5:')
+    print('MATRIZES')
+    print('EXERCÍCIO 1:')
+    m = [[1, 2, 3, 4, 5, 6, 7, 8, 9],
+    [10, 11, 12, 13, 14, 15, 16, 17, 18],
+    [19, 20, 21, 22, 23, 24, 25, 26, 27],
+    [28, 29, 30, 31, 32, 33, 34, 35, 36],
+    [37, 38, 39, 40, 41, 42, 43, 44, 45],
+    [46, 47, 48, 49, 50, 51, 52, 53, 54],
+    [55, 56, 57, 58, 59, 60, 61, 62, 63],
+    [64, 65, 66, 67, 68, 69, 70, 71, 72],
+    [73, 74, 75, 76, 77, 78, 79, 80, 81]]
+
+    print(buscaMatriz(m, 34))
+    print(buscaMatriz(m, 112))
+    print(buscaMatriz(m, 1))
+    print(buscaMatriz(m, 81))
     print('---------------------------------------------------------------------------')
     
